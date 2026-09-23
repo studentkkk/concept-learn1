@@ -1,0 +1,10 @@
+# Python 虚拟环境（不要提交）
+.venv/
+venv/
+env/
+
+# Python 缓存
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
