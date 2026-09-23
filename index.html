@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-page-node-id="HCylp6UgMjDx1n23jsKpBF">
+<head data-page-node-id="pzsVgfDtXRbEWFlBAuHLoS">
+<meta charset="UTF-8" data-page-node-id="yJxymKnxr1F7yLx1HpNEiz">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" data-page-node-id="ohV2NVuO2F81GQeOj62fH3">
+<title>Python 基础语法课程</title>
+<style>
+  :root {
+    --bg: #f5f7fa;
+    --surface: #ffffff;
+    --border: #e2e8f0;
+    --text: #1a202c;
+    --text-muted: #64748b;
+    --accent: #2563eb;
+    --accent-soft: #eff6ff;
+    --code-bg: #f1f5f9;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+                 "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 56px 24px 72px; }
+
+  header { margin-bottom: 40px; }
+  .eyebrow {
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: var(--accent-soft);
+    border-radius: 999px;
+    padding: 4px 12px;
+    margin-bottom: 16px;
+    font-weight: 600;
+  }
+  h1 { font-size: 34px; line-height: 1.3; letter-spacing: -.01em; }
+  .subtitle { margin-top: 12px; color: var(--text-muted); font-size: 15px; max-width: 620px; }
+
+  .meta {
+    display: flex; flex-wrap: wrap; gap: 10px;
+    margin-top: 22px;
+  }
+  .meta span {
+    font-size: 13px; color: var(--text-muted);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 5px 12px;
+  }
+  .meta span b { color: var(--text); font-weight: 600; }
+
+  h2 {
+    font-size: 14px; font-weight: 600; color: var(--text-muted);
+    letter-spacing: .06em; text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+
+  .units { display: flex; flex-direction: column; gap: 14px; }
+
+  a.unit {
+    display: flex; align-items: flex-start; gap: 18px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px 22px;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color .18s, box-shadow .18s, transform .18s;
+  }
+  a.unit:hover {
+    border-color: var(--accent);
+    box-shadow: 0 6px 22px rgba(37, 99, 235, .1);
+    transform: translateY(-2px);
+  }
+  a.unit:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+  .num {
+    flex: 0 0 auto;
+    width: 42px; height: 42px;
+    border-radius: 11px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 16px;
+    display: flex; align-items: center; justify-content: center;
+    font-variant-numeric: tabular-nums;
+  }
+  .body { flex: 1 1 auto; min-width: 0; }
+  .body h3 { font-size: 17px; font-weight: 650; margin-bottom: 4px; }
+  .body p { font-size: 14px; color: var(--text-muted); }
+  .tags { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 6px; }
+  .tags code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 12px;
+    background: var(--code-bg);
+    color: #475569;
+    border-radius: 5px;
+    padding: 2px 7px;
+  }
+  .arrow { color: var(--text-muted); font-size: 18px; align-self: center; flex: 0 0 auto; }
+
+  .foot {
+    margin-top: 44px; padding-top: 22px;
+    border-top: 1px solid var(--border);
+    font-size: 13px; color: var(--text-muted);
+  }
+  .foot code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    background: var(--code-bg); border-radius: 5px; padding: 2px 6px; font-size: 12px;
+    color: #475569;
+  }
+  .foot p + p { margin-top: 6px; }
+</style>
+</head>
+<body data-page-node-id="0Ra4khKDAht48BJh2z6G4J">
+<div class="wrap" data-page-node-id="DxuEANGK9Lo3C6R56AxxOR">
+
+  <header data-page-node-id="jGm0NXKJVCtamZIsInEZeC">
+    <div class="eyebrow" data-page-node-id="Cb0zTZSNqoVlFaVGca2jLD">python-basic-course</div>
+    <h1 data-page-node-id="c3JV1837GRGHPeU4KWy8gF">Python 基础语法课程</h1>
+    <p class="subtitle" data-page-node-id="dbdfvYI6OROzy9ZO7gksa5">
+      为零基础学习者设计的四单元入门课程。按固定顺序推进：先跑通环境，
+      再熟悉 Notebook 与内核，然后学会读懂报错，最后掌握变量与基本类型。
+    </p>
+    <div class="meta" data-page-node-id="iSPFQFA6iPg9AJZtwvQDSy">
+      <span data-page-node-id="xa4DkGarH6GnrH3lHFUhP4"><b data-page-node-id="eaFrlW4cVbGKyKoiJvz7Ey">4</b> 个单元</span>
+      <span data-page-node-id="nmX5D508ASNi8ZCIWO0imR"><b data-page-node-id="nMlQaSYkOL6wHBadBvYgXw">23</b> 节课程</span>
+      <span data-page-node-id="gEcBuqzvBL61hhO0zskJuh"><b data-page-node-id="Ab2SDTWPn4IAkkFE2r88Wx">136</b> 个知识点</span>
+      <span data-page-node-id="IIu7RDhOMoUAV8wpOktz8g">练习笔记本 <b data-page-node-id="FExFjXL8MxOsh6UC3Y7JJB">01.ipynb</b></span>
+    </div>
+  </header>
+
+  <h2 data-page-node-id="wBaJEeNBP7yLLBVWbFIpQH">单元导航</h2>
+  <nav class="units" data-page-node-id="sttqz4l6vvE7qQdJnNvThz">
+
+    <a class="unit" href="#unit1" data-unit="1" data-page-node-id="bO9VJcbPUgiCFcK1LpqH1G">
+      <span class="num" data-page-node-id="5AD17hFJFy83pxYCVtDCTB">01</span>
+      <span class="body" data-page-node-id="vQLRdjmtqqMHC0IA6rnJ1D">
+        <h3 data-page-node-id="G2mG5oOvevzQM5sZmiPYsU">Python 运行环境</h3>
+        <p data-page-node-id="rzEVcZH1Sk9L4ddepqNCQ0">让 Python 在你机器上真正跑起来：安装、版本管理、命令行与包管理。</p>
+        <span class="tags" data-page-node-id="bAEIJ6xn88QY2odvEjlpmX">
+          <code data-page-node-id="BRy6cXebilmzXHBWKGy1QR">解释器</code><code data-page-node-id="tK38w00uHGCeBhHRzoqO9l">pip</code><code data-page-node-id="wjs11MZo0bMxZbPFoW6pjA">venv</code><code data-page-node-id="Sre2rkxr4q9ulNeF9kWYXr">终端</code>
+        </span>
+      </span>
+      <span class="arrow" data-page-node-id="qXpNTnoCSfGKmQAs9AZgfS">&rsaquo;</span>
+    </a>
+
+    <a class="unit" href="#unit2" data-unit="2" data-page-node-id="GaUPnotXB9RnEBhwRPQAup">
+      <span class="num" data-page-node-id="T2Z8D9CuhRE3nqYmTjmdMJ">02</span>
+      <span class="body" data-page-node-id="liSxBoST1x0M2zDBcAxtiY">
+        <h3 data-page-node-id="euvByGoVD7uQ8TD1lskv1p">Notebook 与内核</h3>
+        <p data-page-node-id="pTiZzFtvIvTN1Qo6mX0iAX">理解单元格、执行顺序与内核状态，避开 Notebook 最典型的“乱序执行”陷阱。</p>
+        <span class="tags" data-page-node-id="aX75vln2j300hPFt5F25s1">
+          <code data-page-node-id="dzl5ley9jvu7HBMySQVHuL">cell</code><code data-page-node-id="HxZccAvfYp8f0XorG5mESG">ipynb</code><code data-page-node-id="6gBURVLDEkZlN4OEdUxiqv">kernel</code><code data-page-node-id="KraAFkXZKMH2MHl9Umciqc">restart</code>
+        </span>
+      </span>
+      <span class="arrow" data-page-node-id="mnmEXlRCdtC2cb34IvzIgi">&rsaquo;</span>
+    </a>
+
+    <a class="unit" href="#unit3" data-unit="3" data-page-node-id="XspYDmfywUQEkOYzlEyMN4">
+      <span class="num" data-page-node-id="Y6l8PD5X7rX0PblmSWHmu3">03</span>
+      <span class="body" data-page-node-id="V6ajXkkUEDAoBdZfqkzLTv">
+        <h3 data-page-node-id="Pyyi5ZuWIFNbLMDtSwnjoH">报错与 Traceback</h3>
+        <p data-page-node-id="LBLB3jQEmYxnHPXwIIaXjr">把红色报错从“恐怖”变成“线索”：读懂 Traceback，识别常见异常类型。</p>
+        <span class="tags" data-page-node-id="BkDw9np70xD9B15iw9K2zy">
+          <code data-page-node-id="oE27s0Df3Pa3AujHLIh4dv">traceback</code><code data-page-node-id="ljFhVSzADETxhsFWNzmGai">syntaxerror</code><code data-page-node-id="E3fzDZ47R1UupefGPgF4RL">nameerror</code><code data-page-node-id="SRwQFU0MPS4U7antD4ZpYk">try/except</code>
+        </span>
+      </span>
+      <span class="arrow" data-page-node-id="ILsCSs8yEZ2ZOSQqgjlp1T">&rsaquo;</span>
+    </a>
+
+    <a class="unit" href="#unit4" data-unit="4" data-page-node-id="A3tRqULbdrqFUkDZ025sKM">
+      <span class="num" data-page-node-id="lxA5UJfgO14COPzHHHRnM4">04</span>
+      <span class="body" data-page-node-id="xDFvyajWnwAxol6HjxWVSE">
+        <h3 data-page-node-id="lDYrU92TVW8Lt6DP7s6BZK">变量与基本类型</h3>
+        <p data-page-node-id="txppC8a5yMWiUGa6P8Abdg">掌握赋值、数字、布尔、字符串、空值与类型转换，完成第一个综合小程序。</p>
+        <span class="tags" data-page-node-id="NfTPKDzxAZbag1w6QyNBBV">
+          <code data-page-node-id="A0cEeHtGbpDq7r7VQdLDxz">int</code><code data-page-node-id="zOIBndhKjqjKsGGOz5fiIj">float</code><code data-page-node-id="hnyCjsNNFyxOWMzKHRpnP3">bool</code><code data-page-node-id="NFtlzEWa02NAu51Ax23DW3">str</code><code data-page-node-id="3HnXT1At5xhs2gWFsA1SDt">None</code>
+        </span>
+      </span>
+      <span class="arrow" data-page-node-id="NgCe9OTifyYXtRfmK9jD1u">&rsaquo;</span>
+    </a>
+
+  </nav>
+
+  <div class="foot" data-page-node-id="wAf7bYMAYDgBGs6SVm0e1T">
+    <p data-page-node-id="IQYHnuGrk9jBMNiHXOIm5G">课程契约与命名规则见 <code data-page-node-id="Eo4Zeax42UghIwXqUZTTMf">series-contract.md</code>；全部知识点清单见 <code data-page-node-id="ujvXfJBDPCfqfAtGAMeBkW">_series/concepts.md</code>。</p>
+    <p data-page-node-id="aRf4qsRvi8djizutAk5hG4">配套学生练习笔记本：<code data-page-node-id="4tXMGDK2ROaG7fV9aGWYcD">01.ipynb</code></p>
+  </div>
+
+</div>
+
+<script>
+  document.querySelectorAll('a.unit').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      var href = a.getAttribute('href') || '';
+      if (href.charAt(0) !== '#' || href === '#') { return; }
+      e.preventDefault();
+      var t = document.querySelector(href);
+      if (t) { t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+</script>
+</body>
+</html>
